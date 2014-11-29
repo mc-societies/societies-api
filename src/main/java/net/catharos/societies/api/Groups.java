@@ -1,7 +1,7 @@
 package net.catharos.societies.api;
 
+import net.catharos.bridge.Player;
 import net.catharos.groups.Member;
-import net.catharos.societies.api.member.SocietyMember;
 
 import java.util.Set;
 
@@ -16,8 +16,8 @@ public class Groups {
     public static boolean isActive(Set<Member> members) {
         //todo return false if getLastActive is old
         for (Member member : members) {
-            SocietyMember extension = member.getExtension(SocietyMember.class);
-            if (extension.isAvailable()) {
+            Player player = member.get(Player.class);
+            if (player.isAvailable()) {
                 return true;
             }
         }

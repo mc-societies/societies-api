@@ -1,8 +1,8 @@
 package net.catharos.societies.api;
 
 import gnu.trove.set.hash.THashSet;
+import net.catharos.bridge.Player;
 import net.catharos.groups.Member;
-import net.catharos.societies.api.member.SocietyMember;
 
 import java.util.Set;
 
@@ -18,7 +18,7 @@ public final class Members {
         int online = 0;
 
         for (Member member : members) {
-            if (member.getExtension(SocietyMember.class).isAvailable()) {
+            if (member.get(Player.class).isAvailable()) {
                 online++;
             }
         }
@@ -30,7 +30,7 @@ public final class Members {
         Set<Member> ret = new THashSet<Member>();
 
         for (Member member : members) {
-            if (member.getExtension(SocietyMember.class).isAvailable()) {
+            if (member.get(Player.class).isAvailable()) {
                 ret.add(member);
             }
         }
