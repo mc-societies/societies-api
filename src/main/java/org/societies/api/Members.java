@@ -1,8 +1,8 @@
-package net.catharos.societies.api;
+package org.societies.api;
 
 import gnu.trove.set.hash.THashSet;
-import net.catharos.bridge.Player;
-import net.catharos.groups.Member;
+import org.societies.bridge.Player;
+import org.societies.groups.member.Member;
 
 import java.util.Set;
 

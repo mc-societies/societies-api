@@ -1,4 +1,4 @@
-package net.catharos.societies.api;
+package org.societies.api;
 
 import java.util.UUID;
 

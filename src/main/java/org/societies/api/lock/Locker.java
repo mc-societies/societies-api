@@ -1,4 +1,4 @@
-package net.catharos.societies.api.lock;
+package org.societies.api.lock;
 
 import com.google.common.util.concurrent.ListenableFuture;
 

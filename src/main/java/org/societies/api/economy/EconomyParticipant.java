@@ -1,4 +1,4 @@
-package net.catharos.societies.api.economy;
+package org.societies.api.economy;
 
 import net.milkbowl.vault.economy.EconomyResponse;
 
