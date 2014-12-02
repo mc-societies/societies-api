@@ -1,7 +1,5 @@
 package org.societies.api.economy;
 
-import net.milkbowl.vault.economy.EconomyResponse;
-
 /**
  * Represents a EconomyParticipant
  */

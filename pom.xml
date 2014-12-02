@@ -10,13 +10,6 @@
 
 
     <dependencies>
-        <!--todo remove-->
-        <dependency>
-            <groupId>net.milkbowl.vault</groupId>
-            <artifactId>VaultAPI</artifactId>
-            <version>1.4</version>
-        </dependency>
-
         <dependency>
             <groupId>org.societies</groupId>
             <artifactId>lib-groups</artifactId>
