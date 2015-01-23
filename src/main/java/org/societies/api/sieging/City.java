@@ -2,7 +2,7 @@ package org.societies.api.sieging;
 
 import org.societies.bridge.Location;
 
-import java.util.Set;
+import java.util.Collection;
 import java.util.UUID;
 
 /**
@@ -10,9 +10,11 @@ import java.util.UUID;
  */
 public interface City {
 
+    UUID getUUID();
+
     void addLand(Land land);
 
-    Set<Land> getLands();
+    Collection<Land> getLands();
 
     boolean removeLand(UUID uuid);
 
