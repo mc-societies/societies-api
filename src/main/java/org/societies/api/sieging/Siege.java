@@ -3,10 +3,14 @@ package org.societies.api.sieging;
 import org.joda.time.DateTime;
 import org.societies.bridge.Location;
 
+import java.util.UUID;
+
 /**
  * Represents a Siege
  */
 public interface Siege {
+
+    UUID getUUID();
 
     Besieger getBesieger();
 
