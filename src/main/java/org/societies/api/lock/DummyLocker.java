@@ -1,29 +1,26 @@
 package org.societies.api.lock;
 
-import com.google.common.util.concurrent.Futures;
-import com.google.common.util.concurrent.ListenableFuture;
-
 /**
  * Represents a DummyLocker
  */
 public class DummyLocker implements Locker {
     @Override
-    public ListenableFuture<Boolean> lock(int id) {
-        return Futures.immediateFuture(true);
+    public boolean lock(int id) {
+        return true;
     }
 
     @Override
-    public ListenableFuture<Boolean> unlock(int id) {
-        return Futures.immediateFuture(true);
+    public boolean unlock(int id) {
+        return true;
     }
 
     @Override
-    public ListenableFuture<Boolean> isLocked(int id) {
-        return Futures.immediateFuture(false);
+    public boolean isLocked(int id) {
+        return false;
     }
 
     @Override
-    public ListenableFuture<Boolean> isFree(int id) {
-        return Futures.immediateFuture(true);
+    public boolean isFree(int id) {
+        return true;
     }
 }

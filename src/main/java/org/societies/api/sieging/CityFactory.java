@@ -9,5 +9,7 @@ import java.util.UUID;
  */
 public interface CityFactory {
 
+    City create(Location location);
+
     City create(UUID uuid, Location location);
 }

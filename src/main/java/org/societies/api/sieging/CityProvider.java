@@ -1,7 +1,5 @@
 package org.societies.api.sieging;
 
-import com.google.common.util.concurrent.ListenableFuture;
-
 import java.util.UUID;
 
 /**
@@ -9,6 +7,6 @@ import java.util.UUID;
  */
 public interface CityProvider {
 
-    ListenableFuture<City> getCity(UUID uuid);
+    City getCity(UUID uuid);
 
 }
