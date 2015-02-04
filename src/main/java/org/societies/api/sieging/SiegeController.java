@@ -11,15 +11,15 @@ import java.util.UUID;
  */
 public interface SiegeController {
 
-    Siege start(Group group, City city, Location location);
+    Siege start(Besieger besieger, City city, Location location);
 
-    Siege start(Group group, City city, Location location, Wager wager);
+    Siege start(Besieger besieger, City city, Location location, Wager wager);
 
     Siege getSiege(UUID uuid);
 
     Set<Siege> getSieges(City city);
 
-    Set<Siege> getSieges(Group besieger);
+    Set<Siege> getSieges(Besieger besieger);
 
     Set<Siege> getSiegesAgainst(Group victim);
 

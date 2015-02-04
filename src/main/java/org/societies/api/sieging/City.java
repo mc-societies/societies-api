@@ -12,6 +12,10 @@ public interface City {
 
     UUID getUUID();
 
+    String getName();
+
+    Besieger getOwner();
+
     void addLand(Land land);
 
     Collection<Land> getLands();

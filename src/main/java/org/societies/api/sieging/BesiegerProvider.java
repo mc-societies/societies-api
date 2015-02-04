@@ -1,7 +1,5 @@
 package org.societies.api.sieging;
 
-import com.google.common.util.concurrent.ListenableFuture;
-
 import java.util.UUID;
 
 /**
@@ -9,5 +7,5 @@ import java.util.UUID;
  */
 public interface BesiegerProvider {
 
-    ListenableFuture<Besieger> getBesieger(UUID uuid);
+    Besieger getBesieger(UUID uuid);
 }
