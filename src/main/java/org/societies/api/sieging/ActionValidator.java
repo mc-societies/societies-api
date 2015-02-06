@@ -9,15 +9,15 @@ import javax.annotation.Nullable;
  */
 public interface ActionValidator {
 
-    boolean canInteract(Besieger besieger, Location location);
+    boolean canInteract(@Nullable Besieger besieger, Location location);
 
-    boolean canInteract(Besieger besieger, @Nullable City city);
+    boolean canInteract(@Nullable Besieger besieger, @Nullable City city);
 
-    boolean canDestroy(Besieger besieger, Location location);
+    boolean canDestroy(@Nullable Besieger besieger, Location location);
 
-    boolean canDestroy(Besieger besieger, @Nullable City city);
+    boolean canDestroy(@Nullable Besieger besieger, @Nullable City city);
 
-    boolean canBuild(Besieger besieger, Location location);
+    boolean canBuild(@Nullable Besieger besieger, Location location);
 
-    boolean canBuild(Besieger besieger, @Nullable City city);
+    boolean canBuild(@Nullable Besieger besieger, @Nullable City city);
 }
