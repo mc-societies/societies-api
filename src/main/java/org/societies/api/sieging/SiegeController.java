@@ -21,7 +21,5 @@ public interface SiegeController {
 
     Set<Siege> getSieges(Besieger besieger);
 
-    Set<Siege> getSiegesAgainst(Group victim);
-
     void stop(Siege siege);
 }
