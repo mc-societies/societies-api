@@ -16,6 +16,8 @@ public interface Besieger {
 
     void addCity(City city);
 
+    void addCities(Iterable<City> cities);
+
     void removeCity(String name);
 
     City getCity(String name);
