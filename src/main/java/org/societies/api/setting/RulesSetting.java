@@ -7,12 +7,10 @@ import org.societies.groups.setting.BooleanSetting;
  */
 public class RulesSetting extends BooleanSetting {
 
-    public static final int ID = 0xFFF;
-
     private final String rule;
 
-    public RulesSetting(String rule, int id) {
-        super(ID + id);
+    public RulesSetting(String rule, String id) {
+        super("rule-" + id);
         this.rule = rule;
     }
 

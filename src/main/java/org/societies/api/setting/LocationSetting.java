@@ -17,7 +17,7 @@ import java.io.*;
  * Represents a LocationSetting
  */
 public class LocationSetting extends Setting<Location> {
-    public static final int ID = 0x0;
+    public static final String ID = "location";
 
     private final WorldResolver worldResolver;
     private final World defaultWorld;
@@ -27,7 +27,13 @@ public class LocationSetting extends Setting<Location> {
     public LocationSetting(WorldResolver worldResolver,
                            @Named("default-world") World defaultWorld,
                            @Named("server-identity") short identity) {
-        super(ID);
+        this(ID, worldResolver, defaultWorld, identity);
+    }
+
+    public LocationSetting(String id, WorldResolver worldResolver,
+                           World defaultWorld,
+                           short identity) {
+        super(id);
         this.worldResolver = worldResolver;
         this.defaultWorld = defaultWorld;
         this.identity = identity;

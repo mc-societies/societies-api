@@ -14,7 +14,7 @@ import static java.lang.Byte.parseByte;
  * Represents a RelationSetting
  */
 public class RelationSetting extends Setting<Relation> {
-    public static final int ID = 0x1;
+    public static final String ID = "relation";
 
     public RelationSetting() {
         super(ID);

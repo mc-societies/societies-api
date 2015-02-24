@@ -5,11 +5,11 @@ import org.societies.groups.setting.BooleanSetting;
 /**
  * Represents a VerifySetting
  */
-public class VerifySetting extends BooleanSetting {
+public class VerifiedSetting extends BooleanSetting {
 
-    public static final int ID = 0x3;
+    public static final String ID = "verify";
 
-    public VerifySetting() {
+    public VerifiedSetting() {
         super(ID);
     }
 }
