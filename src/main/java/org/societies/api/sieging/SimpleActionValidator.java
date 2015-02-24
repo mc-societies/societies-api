@@ -15,7 +15,7 @@ public class SimpleActionValidator extends AbstractActionValidator {
     }
 
     @Override
-    public boolean can(Action action, Besieger besieger, @Nullable City city) {
+    public boolean can(int action, Besieger besieger, @Nullable City city) {
         return city == null;
     }
 }

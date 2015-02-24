@@ -9,13 +9,13 @@ import javax.annotation.Nullable;
  */
 public interface ActionValidator {
 
-    boolean can(Action action, @Nullable Besieger besieger, Location location);
+    boolean can(int action, @Nullable Besieger besieger, Location location);
 
-    boolean can(Action action, @Nullable Besieger besieger, @Nullable City city);
+    boolean can(int action, @Nullable Besieger besieger, @Nullable City city);
 
-    public static enum Action {
-        INTERACT,
-        DESTROY,
-        BUILD
+    public static class Action {
+        public static int INTERACT = 0x1;
+        public static int DESTROY = 0x2;
+        public static int BUILD = 0x3;
     }
 }

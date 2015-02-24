@@ -17,7 +17,7 @@ public abstract class AbstractActionValidator implements ActionValidator {
     }
 
     @Override
-    public boolean can(Action action, Besieger besieger, Location location) {
+    public boolean can(int action, Besieger besieger, Location location) {
         return can(action, besieger, cityProvider.getCity(location));
     }
 }
