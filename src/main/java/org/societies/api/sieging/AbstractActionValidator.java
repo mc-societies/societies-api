@@ -1,5 +1,6 @@
 package org.societies.api.sieging;
 
+import com.google.common.base.Optional;
 import org.societies.bridge.Location;
 
 import javax.inject.Inject;
@@ -18,6 +19,8 @@ public abstract class AbstractActionValidator implements ActionValidator {
 
     @Override
     public boolean can(int action, Besieger besieger, Location location) {
-        return can(action, besieger, cityProvider.getCity(location));
+        Optional<City> city = cityProvider.getCity(location);
+
+        return besieger == null || !city.isPresent() || can(action, besieger, city.get());
     }
 }

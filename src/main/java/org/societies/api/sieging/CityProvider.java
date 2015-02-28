@@ -1,6 +1,7 @@
 package org.societies.api.sieging;
 
 import com.google.common.base.Function;
+import com.google.common.base.Optional;
 import org.societies.bridge.Location;
 
 import java.util.UUID;
@@ -10,13 +11,13 @@ import java.util.UUID;
  */
 public interface CityProvider {
 
-    City getCity(UUID uuid);
+    Optional<City> getCity(UUID uuid);
 
-    City getCity(String name);
+    Optional<City> getCity(String name);
 
-    City getCity(Location location);
+    Optional<City> getCity(Location location);
 
-    City getCity(Location location, double distance);
+    Optional<City> getCity(Location location, double distance);
 
-    City getCity(Location location, Function<Integer, Double> distance);
+    Optional<City> getCity(Location location, Function<Integer, Double> distance);
 }

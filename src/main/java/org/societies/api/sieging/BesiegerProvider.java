@@ -1,5 +1,7 @@
 package org.societies.api.sieging;
 
+import com.google.common.base.Optional;
+
 import java.util.UUID;
 
 /**
@@ -7,5 +9,5 @@ import java.util.UUID;
  */
 public interface BesiegerProvider {
 
-    Besieger getBesieger(UUID uuid);
+    Optional<Besieger> getBesieger(UUID uuid);
 }
