@@ -1,6 +1,7 @@
 package org.societies.api.sieging;
 
 import org.joda.time.DateTime;
+import org.joda.time.Duration;
 import org.societies.bridge.Location;
 
 import java.util.UUID;
@@ -24,4 +25,10 @@ public interface Siege {
     Location getLocationInitiated();
 
     DateTime getTimeInitiated();
+
+    DateTime getStartTime();
+
+    Duration getDurationUntilStart();
+
+    boolean isStarted();
 }

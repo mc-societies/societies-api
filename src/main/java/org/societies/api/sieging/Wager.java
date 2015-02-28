@@ -11,5 +11,7 @@ public interface Wager {
 
     UUID getUUID();
 
-    void apply(Group group);
+    boolean apply(Group group);
+
+    boolean fulfill(Group group);
 }

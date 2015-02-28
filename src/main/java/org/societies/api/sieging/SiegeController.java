@@ -16,6 +16,8 @@ public interface SiegeController {
 
     Siege getSiege(UUID uuid);
 
+    Siege getSiege(Location location);
+
     /**
      *
      * @param location The location of the city
@@ -25,7 +27,7 @@ public interface SiegeController {
 
     Set<Siege> getSieges(City city);
 
-    Set<Siege> getSieges(Besieger besieger);
+    Siege getSiegeByAttacker(Besieger besieger);
 
-    void stop(Siege siege);
+    void stop(Siege siege, Besieger winner);
 }
