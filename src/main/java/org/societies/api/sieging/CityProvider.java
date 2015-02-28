@@ -15,6 +15,8 @@ public interface CityProvider {
 
     Optional<City> getCity(String name);
 
+    Optional<City> getNearestCity(Location location);
+
     Optional<City> getCity(Location location);
 
     Optional<City> getCity(Location location, double distance);

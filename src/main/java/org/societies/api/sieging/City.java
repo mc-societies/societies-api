@@ -20,6 +20,8 @@ public interface City extends Linkable, Subject {
 
     Besieger getOwner();
 
+    void setOwner(Besieger owner);
+
     void addLand(Land land);
 
     Collection<Land> getLands();
@@ -30,6 +32,10 @@ public interface City extends Linkable, Subject {
      * @return The location of a bind-stone
      */
     Location getLocation();
+
+    double getRadius();
+
+    double distance(Location location);
 
     DateTime getFounded();
 }

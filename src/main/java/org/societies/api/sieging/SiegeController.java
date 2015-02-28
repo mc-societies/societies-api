@@ -1,5 +1,6 @@
 package org.societies.api.sieging;
 
+import com.google.common.base.Optional;
 import org.societies.bridge.Location;
 
 import java.util.Set;
@@ -14,9 +15,9 @@ public interface SiegeController {
 
     Siege start(Besieger besieger, City city, Location location, Wager wager);
 
-    Siege getSiege(UUID uuid);
+    Optional<Siege> getSiege(UUID uuid);
 
-    Siege getSiege(Location location);
+    Optional<Siege> getSiege(Location location);
 
     /**
      *
@@ -27,7 +28,7 @@ public interface SiegeController {
 
     Set<Siege> getSieges(City city);
 
-    Siege getSiegeByAttacker(Besieger besieger);
+    Optional<Siege> getSiegeByAttacker(Besieger besieger);
 
     void stop(Siege siege, Besieger winner);
 }
