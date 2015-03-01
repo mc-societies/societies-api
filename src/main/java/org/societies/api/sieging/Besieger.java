@@ -2,6 +2,7 @@ package org.societies.api.sieging;
 
 import org.societies.groups.group.Group;
 
+import java.util.Collection;
 import java.util.Set;
 import java.util.UUID;
 
@@ -19,6 +20,12 @@ public interface Besieger {
     void addCities(Iterable<City> cities);
 
     void removeCity(String name);
+
+    Set<Land> getUnallocatedLands();
+
+    void addUnallocatedLand(Land land);
+
+    void addUnallocatedLands(Collection<Land> lands);
 
     City getCity(String name);
 

@@ -28,6 +28,8 @@ public interface City extends Linkable, Subject {
 
     boolean removeLand(UUID uuid);
 
+    void clearLands();
+
     /**
      * @return The location of a bind-stone
      */
