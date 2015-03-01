@@ -31,4 +31,8 @@ public interface Siege {
     Duration getDurationUntilStart();
 
     boolean isStarted();
+
+    void send(String message);
+
+    void send(String message, Object... obj);
 }
