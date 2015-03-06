@@ -9,9 +9,9 @@ public class SimpleLand implements Land {
 
     private final UUID uuid;
 
-    private final City origin;
+    private final UUID origin;
 
-    public SimpleLand(UUID uuid, City origin) {
+    public SimpleLand(UUID uuid, UUID origin) {
         this.uuid = uuid;
         this.origin = origin;
     }
@@ -22,7 +22,7 @@ public class SimpleLand implements Land {
     }
 
     @Override
-    public City getOrigin() {
+    public UUID getOrigin() {
         return origin;
     }
 }

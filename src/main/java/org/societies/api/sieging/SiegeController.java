@@ -33,4 +33,6 @@ public interface SiegeController {
     Optional<Siege> getSiegeByAttacker(Besieger besieger);
 
     void stop(Siege siege, Besieger winner);
+
+    void cancel(Siege siege);
 }

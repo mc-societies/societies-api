@@ -9,5 +9,5 @@ public interface Land {
 
     UUID getUUID();
 
-    City getOrigin();
+    UUID getOrigin();
 }

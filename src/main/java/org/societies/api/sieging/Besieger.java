@@ -25,6 +25,8 @@ public interface Besieger {
 
     void addUnallocatedLand(Land land);
 
+    void removeUnallocatedLand(Land land);
+
     void addUnallocatedLands(Collection<Land> lands);
 
     City getCity(String name);
