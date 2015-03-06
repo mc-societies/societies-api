@@ -19,6 +19,8 @@ public interface SiegeController {
 
     Optional<Siege> getSiege(Location location);
 
+    Optional<Siege> getSiegeByInitiatedLocation(Location location);
+
     /**
      *
      * @param location The location of the city
