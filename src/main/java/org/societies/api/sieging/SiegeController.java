@@ -4,7 +4,6 @@ import com.google.common.base.Optional;
 import org.societies.bridge.Location;
 
 import java.util.Set;
-import java.util.UUID;
 
 /**
  * Represents a SiegeController
@@ -15,18 +14,18 @@ public interface SiegeController {
 
     Siege start(Besieger besieger, City city, Location location, Wager wager);
 
-    Optional<Siege> getSiege(UUID uuid);
 
-    Optional<Siege> getSiege(Location location);
+    Optional<Siege> getSiegeInitiatedAt(Location location);
 
-    Optional<Siege> getSiegeByInitiatedLocation(Location location);
+    Optional<Siege> getSiegeInitiatedNear(Location location);
 
     /**
      *
      * @param location The location of the city
      * @return The siege
      */
-    Set<Siege> getSieges(Location location);
+    Set<Siege> getSiegeNear(Location location);
+
 
     Set<Siege> getSieges(City city);
 
