@@ -8,10 +8,14 @@ import java.util.UUID;
  * This exception indicates that something badly happened because of a player. So let this player be punished!
  */
 public class PlayerRuntimeException extends ArgumentRuntimeException {
-    /** The player name */
+    /**
+     * The player name
+     */
     private final UUID player;
 
-    /** Indicated if the player should be kicked */
+    /**
+     * Indicated if the player should be kicked
+     */
     private boolean kick = true;
 
 

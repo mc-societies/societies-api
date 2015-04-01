@@ -20,7 +20,6 @@ public interface SiegeController {
     Optional<Siege> getSiegeInitiatedNear(Location location);
 
     /**
-     *
      * @param location The location of the city
      * @return The siege
      */

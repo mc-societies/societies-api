@@ -15,7 +15,9 @@ public class ForwardingBesiegerProvider implements BesiegerProvider {
     private final GroupProvider groupProvider;
 
     @Inject
-    public ForwardingBesiegerProvider(GroupProvider groupProvider) {this.groupProvider = groupProvider;}
+    public ForwardingBesiegerProvider(GroupProvider groupProvider) {
+        this.groupProvider = groupProvider;
+    }
 
     @Override
     public Optional<Besieger> getBesieger(UUID uuid) {
