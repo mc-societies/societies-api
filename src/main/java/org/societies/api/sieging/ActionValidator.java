@@ -13,7 +13,7 @@ public interface ActionValidator {
 
     boolean can(int action, @Nullable Besieger besieger, @Nullable City city);
 
-    public static class Action {
+    class Action {
         public static int INTERACT = 0x1;
         public static int DESTROY = 0x2;
         public static int BUILD = 0x3;

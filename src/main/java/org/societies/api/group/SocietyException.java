@@ -1,24 +1,26 @@
 package org.societies.api.group;
 
-import net.catharos.lib.core.lang.ArgumentRuntimeException;
-
 /**
  * Represents a MemberLoadingException
  */
-public class SocietyException extends ArgumentRuntimeException {
+public class SocietyException extends RuntimeException {
 
     public SocietyException() {
     }
 
-    public SocietyException(String message, Object... args) {
-        super(message, args);
+    public SocietyException(String message) {
+        super(message);
     }
 
-    public SocietyException(Throwable cause, String message, Object... args) {
-        super(cause, message, args);
+    public SocietyException(String message, Throwable cause) {
+        super(message, cause);
     }
 
     public SocietyException(Throwable cause) {
         super(cause);
+    }
+
+    public SocietyException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
+        super(message, cause, enableSuppression, writableStackTrace);
     }
 }

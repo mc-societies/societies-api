@@ -1,13 +1,11 @@
 package org.societies.api;
 
-import net.catharos.lib.core.lang.ArgumentRuntimeException;
-
 import java.util.UUID;
 
 /**
  * This exception indicates that something badly happened because of a player. So let this player be punished!
  */
-public class PlayerRuntimeException extends ArgumentRuntimeException {
+public class PlayerRuntimeException extends RuntimeException {
     /**
      * The player name
      */
@@ -20,33 +18,27 @@ public class PlayerRuntimeException extends ArgumentRuntimeException {
 
 
     public PlayerRuntimeException(UUID player) {
-        super();
-
         this.player = player;
     }
 
-    public PlayerRuntimeException(UUID uuid, String message, Object... args) {
-        super(message, args);
-
-        this.player = uuid;
+    public PlayerRuntimeException(String message, UUID player) {
+        super(message);
+        this.player = player;
     }
 
-    public PlayerRuntimeException(UUID uuid, Throwable cause, String message, Object... args) {
-        super(cause, message, args);
-
-        this.player = uuid;
+    public PlayerRuntimeException(String message, Throwable cause, UUID player) {
+        super(message, cause);
+        this.player = player;
     }
 
-    public PlayerRuntimeException(UUID uuid, Throwable cause) {
+    public PlayerRuntimeException(Throwable cause, UUID player) {
         super(cause);
-
-        this.player = uuid;
+        this.player = player;
     }
 
-    public PlayerRuntimeException(UUID uuid, Exception e, String format) {
-        super(e, format);
-
-        this.player = uuid;
+    public PlayerRuntimeException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace, UUID player) {
+        super(message, cause, enableSuppression, writableStackTrace);
+        this.player = player;
     }
 
     public PlayerRuntimeException dontKick() {
