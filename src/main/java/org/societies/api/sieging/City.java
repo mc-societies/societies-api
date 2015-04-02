@@ -3,7 +3,6 @@ package org.societies.api.sieging;
 import org.joda.time.DateTime;
 import org.societies.bridge.Location;
 import org.societies.groups.Linkable;
-import org.societies.groups.setting.subject.Subject;
 
 import java.util.Collection;
 import java.util.UUID;
@@ -11,9 +10,8 @@ import java.util.UUID;
 /**
  * Represents a City
  */
-public interface City extends Linkable, Subject {
+public interface City extends Linkable {
 
-    @Override
     UUID getUUID();
 
     String getName();
