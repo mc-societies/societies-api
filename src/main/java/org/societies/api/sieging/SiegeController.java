@@ -23,10 +23,10 @@ public interface SiegeController {
      * @param location The location of the city
      * @return The siege
      */
-    Set<Siege> getSiegeNear(Location location);
+    Optional<Siege> getSiegeByLocation(Location location);
 
 
-    Set<Siege> getSieges(City city);
+    Set<Siege> getSiegesByLocation(City city);
 
     Optional<Siege> getSiegeByAttacker(Besieger besieger);
 
