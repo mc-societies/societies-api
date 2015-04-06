@@ -2,7 +2,7 @@ package org.societies.api.sieging;
 
 import org.joda.time.DateTime;
 import org.joda.time.Duration;
-import org.societies.bridge.Location;
+import org.societies.api.math.Location;
 
 import java.util.UUID;
 

@@ -1,7 +1,7 @@
 package org.societies.api;
 
 import gnu.trove.set.hash.THashSet;
-import org.societies.bridge.Player;
+import org.bukkit.entity.Player;
 import org.societies.groups.member.Member;
 
 import java.util.Set;
@@ -18,7 +18,7 @@ public final class Members {
         int online = 0;
 
         for (Member member : members) {
-            if (member.get(Player.class).isAvailable()) {
+            if (member.get(Player.class).isOnline()) {
                 online++;
             }
         }
@@ -30,7 +30,7 @@ public final class Members {
         Set<Member> ret = new THashSet<Member>();
 
         for (Member member : members) {
-            if (member.get(Player.class).isAvailable()) {
+            if (member.get(Player.class).isOnline()) {
                 ret.add(member);
             }
         }

@@ -1,7 +1,7 @@
 package org.societies.api.sieging;
 
 import org.joda.time.DateTime;
-import org.societies.bridge.Location;
+import org.societies.api.math.Location;
 import org.societies.groups.Linkable;
 
 import java.util.Collection;

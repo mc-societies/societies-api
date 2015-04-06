@@ -1,6 +1,6 @@
 package org.societies.api;
 
-import org.societies.bridge.Player;
+import org.bukkit.entity.Player;
 import org.societies.groups.member.Member;
 
 import java.util.Set;
@@ -17,7 +17,7 @@ public class Groups {
         //todo return false if getLastActive is old
         for (Member member : members) {
             Player player = member.get(Player.class);
-            if (player.isAvailable()) {
+            if (player.isOnline()) {
                 return true;
             }
         }

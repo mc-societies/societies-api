@@ -1,7 +1,7 @@
 package org.societies.api.group;
 
 import com.google.common.base.Optional;
-import org.societies.bridge.Location;
+import org.societies.api.math.Location;
 
 
 /**
